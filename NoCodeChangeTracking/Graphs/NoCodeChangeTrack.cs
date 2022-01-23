@@ -1,12 +1,9 @@
-using System;
-using System.Linq;
-using System.Collections;
-using System.Collections.Generic;
-using PX.Data;
-using PX.Data.BQL.Fluent;
 using Aktion.Common.Acumatica.NoCodeChangeTracking.DAC;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using PX.Data;
+using PX.Data.BQL.Fluent;
+using System.Collections;
 
 namespace Aktion.Common.Acumatica.NoCodeChangeTracking.Graphs
 {
@@ -18,11 +15,36 @@ namespace Aktion.Common.Acumatica.NoCodeChangeTracking.Graphs
         #region DAC overrides
         
         [PXMergeAttributes(Method = MergeMethod.Append)]
-        [PXUIField(DisplayName = "Creation Date")]
-        protected virtual void CSAttribute_CreatedDateTime_CacheAttached(PXCache cache)
-        {
-        }
-        
+        [PXUIField(DisplayName = PXDBLastModifiedByIDAttribute.DisplayFieldNames.CreatedDateTime, Enabled = false)]
+        protected virtual void CSAttribute_CreatedDateTime_CacheAttached(PXCache cache) { }
+
+        [PXMergeAttributes(Method = MergeMethod.Append)]
+        [PXUIField(DisplayName = PXDBLastModifiedByIDAttribute.DisplayFieldNames.LastModifiedDateTime, Enabled = false)]
+        protected virtual void CSAttribute_LastModifiedDateTime_CacheAttached(PXCache cache) { }
+            
+        [PXMergeAttributes(Method = MergeMethod.Append)]
+        [PXUIField(DisplayName = PXDBLastModifiedByIDAttribute.DisplayFieldNames.CreatedDateTime, Enabled = false)]
+        protected virtual void CSAttributeDetail_CreatedDateTime_CacheAttached(PXCache cache) { }
+
+        [PXMergeAttributes(Method = MergeMethod.Append)]
+        [PXUIField(DisplayName = PXDBLastModifiedByIDAttribute.DisplayFieldNames.LastModifiedDateTime, Enabled = false)]
+        protected virtual void CSAttributeDetail_LastModifiedDateTime_CacheAttached(PXCache cache) { }
+
+        [PXMergeAttributes(Method = MergeMethod.Append)]
+        [PXUIField(DisplayName = PXDBLastModifiedByIDAttribute.DisplayFieldNames.CreatedDateTime, Enabled = false)]
+        protected virtual void CSAttributeGroup_CreatedDateTime_CacheAttached(PXCache cache) { }
+
+        [PXMergeAttributes(Method = MergeMethod.Append)]
+        [PXUIField(DisplayName = PXDBLastModifiedByIDAttribute.DisplayFieldNames.LastModifiedDateTime, Enabled = false)]
+        protected virtual void CSAttributeGroup_LastModifiedDateTime_CacheAttached(PXCache cache) { }
+
+        [PXMergeAttributes(Method = MergeMethod.Append)]
+        [PXUIField(DisplayName = PXDBLastModifiedByIDAttribute.DisplayFieldNames.CreatedDateTime, Enabled = false)]
+        protected virtual void CSScreenAttribute_CreatedDateTime_CacheAttached(PXCache cache) { }
+
+        [PXMergeAttributes(Method = MergeMethod.Append)]
+        [PXUIField(DisplayName = PXDBLastModifiedByIDAttribute.DisplayFieldNames.LastModifiedDateTime, Enabled = false)]
+        protected virtual void CSScreenAttribute_LastModifiedDateTime_CacheAttached(PXCache cache) { }
         #endregion
 
         #region Views
