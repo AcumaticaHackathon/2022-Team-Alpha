@@ -36,7 +36,7 @@ namespace Aktion.Common.Acumatica.NoCodeChangeTracking.DAC
     #endregion
 
     #region LastModifiedDateTime
-    [PXDBLastModifiedDateTime()]
+    [PXDBLastModifiedDateTime]
     public virtual DateTime? LastModifiedDateTime { get; set; }
     public abstract class lastModifiedDateTime : PX.Data.BQL.BqlDateTime.Field<lastModifiedDateTime> { }
     #endregion
