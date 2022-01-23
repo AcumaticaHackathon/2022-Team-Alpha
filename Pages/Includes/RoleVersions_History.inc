@@ -1,14 +1,18 @@
 <px:PXTabItem Text="History">
     <Template>
-        <px:PXFormView Width="500" DataMember="BusinessEventVersions" Caption="Biz Event History" CaptionVisible="False" runat="server" ID="frmtBusEventHistory">
+        <px:PXFormView Height="500" CaptionVisible="False" DataMember="RoleVersions" runat="server" ID="frmRoleHistory" Caption="Role History">
             <Template>
-                <px:PXGrid FilesIndicator="False" NoteIndicator="False" SyncPosition="True" SkinID="Details" Height="300" runat="server" ID="grdBusEventVersions">
+                <px:PXGrid FilesIndicator="False" NoteIndicator="False" SyncPosition="True" SkinID="Details" Height="300" runat="server" ID="grdRoleVersions">
                     <Levels>
-                        <px:PXGridLevel DataMember="BusinessEventVersions">
+                        <px:PXGridLevel DataMember="RoleVersions">
                             <!--#include file="~\Pages\AK\Includes\Grid_History.inc"-->
+                            <Columns>
+                                <px:PXGridColumn DataField="Rolename" Width="220"></px:PXGridColumn>
+                                <px:PXGridColumn DataField="ApplicationName" Width="180"></px:PXGridColumn>
+                            </Columns>
                         </px:PXGridLevel>
                     </Levels>
-                    <ActionBar ActionsVisible="True">
+                    <ActionBar>
                         <CustomItems>
                             <px:PXToolBarButton Text="Compare"></px:PXToolBarButton>
                         </CustomItems>

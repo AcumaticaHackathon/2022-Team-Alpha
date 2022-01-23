@@ -5,13 +5,7 @@
                 <px:PXGrid FilesIndicator="False" NoteIndicator="False" SyncPosition="True" SkinID="Details" Height="300" runat="server" ID="grdGIHistory">
                     <Levels>
                         <px:PXGridLevel DataMember="GIVersions">
-                            <Columns>
-                                <px:PXGridColumn DataField="Selected" Width="60"></px:PXGridColumn>
-                                <px:PXGridColumn DataField="Version" Width="70"></px:PXGridColumn>
-                                <px:PXGridColumn DataField="Name" Width="280"></px:PXGridColumn>
-                                <px:PXGridColumn DataField="ActionName" Width="70"></px:PXGridColumn>
-                                <px:PXGridColumn DataField="CreatedDateTime" Width="90"></px:PXGridColumn>
-                            </Columns>
+                            <!--#include file="~\Pages\AK\Includes\Grid_History.inc"-->
                         </px:PXGridLevel>
                     </Levels>
                     <ActionBar>

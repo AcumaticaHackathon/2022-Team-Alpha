@@ -99,15 +99,6 @@
                                         <EditRecord Enabled="False"></EditRecord>
                                         <Save Enabled="False"></Save>
                                     </Actions>
-                                    <Actions>
-                                        <Delete Enabled="False"></Delete>
-                                    </Actions>
-                                    <Actions>
-                                        <EditRecord Enabled="False"></EditRecord>
-                                    </Actions>
-                                    <Actions>
-                                        <Save Enabled="False"></Save>
-                                    </Actions>
                                 </ActionBar>
                             </px:PXGrid>
                         </Template>
@@ -200,14 +191,8 @@
                                 <ActionBar ActionsVisible="True">
                                     <Actions>
                                         <AddNew Enabled="False"></AddNew>
-                                    </Actions>
-                                    <Actions>
                                         <Delete Enabled="False"></Delete>
-                                    </Actions>
-                                    <Actions>
                                         <EditRecord Enabled="False"></EditRecord>
-                                    </Actions>
-                                    <Actions>
                                         <Save Enabled="False"></Save>
                                     </Actions>
                                 </ActionBar>
@@ -226,112 +211,9 @@
                             <!--#include file="~\Pages\AK\Includes\GIVersions_Ons.inc"-->
                             <!--#include file="~\Pages\AK\Includes\GIVersions_Relations.inc"-->
                             <!--#include file="~\Pages\AK\Includes\GIVersions_Results.inc"-->
-                            <px:PXTabItem Text="Sorts">
-                                <Template>
-                                    <px:PXFormView Width="500" Caption="Sorts" CaptionVisible="False" DataMember="GISorts" runat="server" ID="frmGISorts">
-                                        <Template>
-                                            <px:PXGrid FilesIndicator="False" NoteIndicator="False" SyncPosition="True" SkinID="Details" Height="300" runat="server" ID="grdGISorts">
-                                                <Levels>
-                                                    <px:PXGridLevel DataMember="GISorts">
-                                                        <Columns>
-                                                            <px:PXGridColumn DataField="DataFieldName" Width="70"></px:PXGridColumn>
-                                                            <px:PXGridColumn DataField="SortOrder" Width="70"></px:PXGridColumn>
-                                                        </Columns>
-                                                    </px:PXGridLevel>
-                                                </Levels>
-                                                <ActionBar ActionsVisible="True">
-                                                    <Actions>
-                                                        <AddNew Enabled="False"></AddNew>
-                                                    </Actions>
-                                                    <Actions>
-                                                        <Delete Enabled="False"></Delete>
-                                                    </Actions>
-                                                    <Actions>
-                                                        <EditRecord Enabled="False"></EditRecord>
-                                                    </Actions>
-                                                    <Actions>
-                                                        <Save Enabled="False"></Save>
-                                                    </Actions>
-                                                    <CustomItems>
-                                                        <px:PXToolBarButton Text="Sort History"></px:PXToolBarButton>
-                                                    </CustomItems>
-                                                </ActionBar>
-                                            </px:PXGrid>
-                                        </Template>
-                                    </px:PXFormView>
-                                </Template>
-                            </px:PXTabItem>
-                            <px:PXTabItem Text="Tables">
-                                <Template>
-                                    <px:PXFormView Width="500" runat="server" ID="frmGITables" Caption="Tables" CaptionVisible="False" DataMember="GITables">
-                                        <Template>
-                                            <px:PXGrid FilesIndicator="False" NoteIndicator="False" SyncPosition="True" SkinID="Details" Height="300" runat="server" ID="grdGITables">
-                                                <Levels>
-                                                    <px:PXGridLevel DataMember="GITables">
-                                                        <Columns>
-                                                            <px:PXGridColumn DataField="Alias" Width="280"></px:PXGridColumn>
-                                                            <px:PXGridColumn DataField="Name" Width="280"></px:PXGridColumn>
-                                                        </Columns>
-                                                    </px:PXGridLevel>
-                                                </Levels>
-                                                <ActionBar ActionsVisible="True">
-                                                    <Actions>
-                                                        <AddNew Enabled="False"></AddNew>
-                                                    </Actions>
-                                                    <Actions>
-                                                        <Delete Enabled="False"></Delete>
-                                                    </Actions>
-                                                    <Actions>
-                                                        <EditRecord Enabled="False"></EditRecord>
-                                                    </Actions>
-                                                    <Actions>
-                                                        <Save Enabled="False"></Save>
-                                                    </Actions>
-                                                    <CustomItems>
-                                                        <px:PXToolBarButton Text="Table History"></px:PXToolBarButton>
-                                                    </CustomItems>
-                                                </ActionBar>
-                                            </px:PXGrid>
-                                        </Template>
-                                    </px:PXFormView>
-                                </Template>
-                            </px:PXTabItem>
-                            <px:PXTabItem Text="Wheres">
-                                <Template>
-                                    <px:PXFormView Width="500" Caption="Wheres" CaptionVisible="False" DataMember="GIWheres" runat="server" ID="frmGIWheres">
-                                        <Template>
-                                            <px:PXGrid NoteIndicator="False" FilesIndicator="False" SyncPosition="True" SkinID="Details" Height="300" runat="server" ID="grdGIWheres">
-                                                <Levels>
-                                                    <px:PXGridLevel DataMember="GIWheres">
-                                                        <Columns>
-                                                            <px:PXGridColumn DataField="DataFieldName" Width="280"></px:PXGridColumn>
-                                                            <px:PXGridColumn DataField="Condition" Width="70"></px:PXGridColumn>
-                                                            <px:PXGridColumn DataField="Value1" Width="70"></px:PXGridColumn>
-                                                        </Columns>
-                                                    </px:PXGridLevel>
-                                                </Levels>
-                                                <ActionBar ActionsVisible="True">
-                                                    <Actions>
-                                                        <AddNew Enabled="False"></AddNew>
-                                                    </Actions>
-                                                    <Actions>
-                                                        <Delete Enabled="False"></Delete>
-                                                    </Actions>
-                                                    <Actions>
-                                                        <EditRecord Enabled="False"></EditRecord>
-                                                    </Actions>
-                                                    <Actions>
-                                                        <Save Enabled="False"></Save>
-                                                    </Actions>
-                                                    <CustomItems>
-                                                        <px:PXToolBarButton Text="Where History"></px:PXToolBarButton>
-                                                    </CustomItems>
-                                                </ActionBar>
-                                            </px:PXGrid>
-                                        </Template>
-                                    </px:PXFormView>
-                                </Template>
-                            </px:PXTabItem>
+                            <!--#include file="~\Pages\AK\Includes\GIVersions_Sorts.inc"-->
+                            <!--#include file="~\Pages\AK\Includes\GIVersions_Tables.inc"-->
+                            <!--#include file="~\Pages\AK\Includes\GIVersions_Wheres.inc"-->
                         </Items>
                     </px:PXTab>
                     <px:PXLayoutRule runat="server" ID="CstPXLayoutRule138" StartColumn="True"></px:PXLayoutRule>
@@ -384,49 +266,7 @@
                     </px:PXFormView>
                     <px:PXTab Width="500" FilesIndicator="True" NoteIndicator="True" SyncPosition="False" DataMember="ReportVersions" runat="server" ID="tabReportDetails">
                         <Items>
-                            <px:PXTabItem Text="History">
-                                <Template>
-                                    <px:PXFormView Width="500" Caption="Report History" CaptionVisible="False" DataMember="ReportVersions" runat="server" ID="frmReportHistory">
-                                        <Template>
-                                            <px:PXGrid Height="300" SkinID="Details" FilesIndicator="False" NoteIndicator="False" SyncPosition="True" runat="server" ID="grdReportHistory">
-                                                <Levels>
-                                                    <px:PXGridLevel DataMember="ReportVersions">
-                                                        <Columns>
-                                                            <px:PXGridColumn DataField="Selected" Width="60" Type="CheckBox"></px:PXGridColumn>
-                                                            <px:PXGridColumn DataField="Version" Width="70"></px:PXGridColumn>
-                                                            <px:PXGridColumn DataField="ActionName" Width="70"></px:PXGridColumn>
-                                                            <px:PXGridColumn DataField="Description" Width="70"></px:PXGridColumn>
-                                                            <px:PXGridColumn DataField="Active" Width="70"></px:PXGridColumn>
-                                                            <px:PXGridColumn DataField="CreatedDateTime" Width="90"></px:PXGridColumn>
-                                                        </Columns>
-                                                    </px:PXGridLevel>
-                                                </Levels>
-                                                <AutoCallBack ActiveBehavior="True" Target="frmCurrentReportVersion" Command="Refresh">
-                                                    <Behavior RepaintControlsIDs="txtReportVersion"></Behavior>
-                                                </AutoCallBack>
-                                                <AutoCallBack Target="frmReportCurrentVersion"></AutoCallBack>
-                                                <CallbackCommands>
-                                                    <Refresh RepaintControlsIDs="txtReportVersion"></Refresh>
-                                                </CallbackCommands>
-                                                <ActionBar>
-                                                    <CustomItems>
-                                                        <px:PXToolBarButton Text="Compare"></px:PXToolBarButton>
-                                                    </CustomItems>
-                                                    <Actions>
-                                                        <AddNew Enabled="False"></AddNew>
-                                                        <Delete Enabled="False"></Delete>
-                                                        <EditRecord Enabled="False"></EditRecord>
-                                                        <Save Enabled="False"></Save>
-                                                    </Actions>
-                                                    <Actions>
-                                                        <Delete Enabled="True"></Delete>
-                                                    </Actions>
-                                                </ActionBar>
-                                            </px:PXGrid>
-                                        </Template>
-                                    </px:PXFormView>
-                                </Template>
-                            </px:PXTabItem>
+                            <!--#include file="~\Pages\AK\Includes\ReportVersions_History.inc"-->
                         </Items>
                     </px:PXTab>
                     <px:PXLayoutRule runat="server" ID="CstPXLayoutRule38" StartColumn="True"></px:PXLayoutRule>
@@ -469,139 +309,10 @@
                     </px:PXFormView>
                     <px:PXTab Width="500" runat="server" ID="tabRoleDetails" DataMember="RoleVersions">
                         <Items>
-                            <px:PXTabItem Text="History">
-                                <Template>
-                                    <px:PXFormView Height="500" CaptionVisible="False" DataMember="RoleVersions" runat="server" ID="frmRoleHistory" Caption="Role History">
-                                        <Template>
-                                            <px:PXGrid FilesIndicator="False" NoteIndicator="False" SyncPosition="True" SkinID="Details" Height="300" runat="server" ID="grdRoleVersions">
-                                                <Levels>
-                                                    <px:PXGridLevel DataMember="RoleVersions">
-                                                        <Columns>
-                                                            <px:PXGridColumn DataField="Selected" Width="60"></px:PXGridColumn>
-                                                            <px:PXGridColumn DataField="Version" Width="70"></px:PXGridColumn>
-                                                            <px:PXGridColumn DataField="ActionName" Width="70"></px:PXGridColumn>
-                                                            <px:PXGridColumn DataField="Rolename" Width="220"></px:PXGridColumn>
-                                                            <px:PXGridColumn DataField="ApplicationName" Width="180"></px:PXGridColumn>
-                                                            <px:PXGridColumn DataField="CreatedDateTime" Width="90"></px:PXGridColumn>
-                                                        </Columns>
-                                                    </px:PXGridLevel>
-                                                </Levels>
-                                                <ActionBar>
-                                                    <CustomItems>
-                                                        <px:PXToolBarButton Text="Compare"></px:PXToolBarButton>
-                                                    </CustomItems>
-                                                    <Actions>
-                                                        <AddNew Enabled="False"></AddNew>
-                                                    </Actions>
-                                                    <Actions>
-                                                        <Delete Enabled="False"></Delete>
-                                                    </Actions>
-                                                    <Actions>
-                                                        <EditRecord Enabled="False"></EditRecord>
-                                                    </Actions>
-                                                    <Actions>
-                                                        <Save Enabled="False"></Save>
-                                                    </Actions>
-                                                </ActionBar>
-                                            </px:PXGrid>
-                                        </Template>
-                                    </px:PXFormView>
-                                </Template>
-                            </px:PXTabItem>
-                            <px:PXTabItem Text="Caches">
-                                <Template>
-                                    <px:PXFormView Height="500" Caption="Caches" CaptionVisible="False" DataMember="RolesInCaches" runat="server" ID="frmRolesInCaches">
-                                        <Template>
-                                            <px:PXGrid FilesIndicator="False" NoteIndicator="False" SyncPosition="True" Height="300" runat="server" ID="grdRolesInCaches">
-                                                <Levels>
-                                                    <px:PXGridLevel DataMember="RolesInCaches">
-                                                        <Columns>
-                                                            <px:PXGridColumn DataField="ScreenID" Width="96"></px:PXGridColumn>
-                                                            <px:PXGridColumn DataField="Cachetype" Width="280"></px:PXGridColumn>
-                                                        </Columns>
-                                                    </px:PXGridLevel>
-                                                </Levels>
-                                                <AutoSize MinHeight="200" MinWidth="200" Container="Parent"></AutoSize>
-                                                <AutoSize MinHeight="200"></AutoSize>
-                                                <AutoSize MinWidth="200"></AutoSize>
-                                                <ActionBar ActionsVisible="True">
-                                                    <Actions>
-                                                        <AddNew Enabled="False"></AddNew>
-                                                        <Delete Enabled="False"></Delete>
-                                                        <EditRecord Enabled="False"></EditRecord>
-                                                        <Save Enabled="False"></Save>
-                                                    </Actions>
-                                                    <CustomItems>
-                                                        <px:PXToolBarButton Text="Cache History"></px:PXToolBarButton>
-                                                    </CustomItems>
-                                                </ActionBar>
-                                                <AutoCallBack>
-                                                    <Behavior RepaintControlsIDs="grdRoleVersions"></Behavior>
-                                                </AutoCallBack>
-                                            </px:PXGrid>
-                                        </Template>
-                                    </px:PXFormView>
-                                </Template>
-                            </px:PXTabItem>
-                            <px:PXTabItem Text="Graphs">
-                                <Template>
-                                    <px:PXFormView Height="500" Caption="Graphs" CaptionVisible="False" DataMember="RolesInGraphs" runat="server" ID="frmRolesInGraphs">
-                                        <Template>
-                                            <px:PXGrid FilesIndicator="False" NoteIndicator="False" SyncPosition="True" Height="300" runat="server" ID="grdRolesInGraphs">
-                                                <Levels>
-                                                    <px:PXGridLevel DataMember="RolesInGraphs">
-                                                        <Columns>
-                                                            <px:PXGridColumn DataField="ScreenID" Width="96"></px:PXGridColumn>
-                                                        </Columns>
-                                                    </px:PXGridLevel>
-                                                </Levels>
-                                                <ActionBar ActionsVisible="True">
-                                                    <Actions>
-                                                        <AddNew Enabled="False"></AddNew>
-                                                        <Delete Enabled="False"></Delete>
-                                                        <Save Enabled="False"></Save>
-                                                    </Actions>
-                                                    <CustomItems>
-                                                        <px:PXToolBarButton Text="Graph History"></px:PXToolBarButton>
-                                                    </CustomItems>
-                                                </ActionBar>
-                                                <AutoSize MinHeight="200" MinWidth="200" Container="Parent"></AutoSize>
-                                            </px:PXGrid>
-                                        </Template>
-                                    </px:PXFormView>
-                                </Template>
-                            </px:PXTabItem>
-                            <px:PXTabItem Text="Members">
-                                <Template>
-                                    <px:PXFormView Height="500" Caption="Members" CaptionVisible="False" DataMember="RolesInMembers" runat="server" ID="frmRolesInMembers">
-                                        <Template>
-                                            <px:PXGrid FilesIndicator="False" NoteIndicator="False" SyncPosition="True" Height="300" runat="server" ID="grdRolesInMembers">
-                                                <Levels>
-                                                    <px:PXGridLevel DataMember="RolesInMembers">
-                                                        <Columns>
-                                                            <px:PXGridColumn DataField="ScreenID" Width="96"></px:PXGridColumn>
-                                                            <px:PXGridColumn DataField="Cachetype" Width="280"></px:PXGridColumn>
-                                                            <px:PXGridColumn DataField="Membername" Width="280"></px:PXGridColumn>
-                                                        </Columns>
-                                                    </px:PXGridLevel>
-                                                </Levels>
-                                                <ActionBar ActionsVisible="True">
-                                                    <Actions>
-                                                        <AddNew Enabled="False"></AddNew>
-                                                        <Delete Enabled="False"></Delete>
-                                                        <EditRecord Enabled="False"></EditRecord>
-                                                        <Save Enabled="False"></Save>
-                                                    </Actions>
-                                                    <CustomItems>
-                                                        <px:PXToolBarButton Text="Member History"></px:PXToolBarButton>
-                                                    </CustomItems>
-                                                </ActionBar>
-                                                <AutoSize MinHeight="200" MinWidth="200" Container="Parent"></AutoSize>
-                                            </px:PXGrid>
-                                        </Template>
-                                    </px:PXFormView>
-                                </Template>
-                            </px:PXTabItem>
+                            <!--#include file="~\Pages\AK\Includes\RoleVersions_History.inc"-->
+                            <!--#include file="~\Pages\AK\Includes\RoleVersions_Caches.inc"-->
+                            <!--#include file="~\Pages\AK\Includes\RoleVersions_Graphs.inc"-->
+                            <!--#include file="~\Pages\AK\Includes\RoleVersions_Members.inc"-->
                         </Items>
                     </px:PXTab>
                     <px:PXLayoutRule runat="server" ID="CstPXLayoutRule108" StartColumn="True"></px:PXLayoutRule>
@@ -630,14 +341,8 @@
                                 <ActionBar ActionsVisible="True">
                                     <Actions>
                                         <AddNew Enabled="False"></AddNew>
-                                    </Actions>
-                                    <Actions>
                                         <Delete Enabled="False"></Delete>
-                                    </Actions>
-                                    <Actions>
                                         <EditRecord Enabled="False"></EditRecord>
-                                    </Actions>
-                                    <Actions>
                                         <Save Enabled="False"></Save>
                                     </Actions>
                                 </ActionBar>
@@ -651,138 +356,10 @@
                     </px:PXFormView>
                     <px:PXTab Width="500" DataMember="ScenarioMappingVersions" runat="server" ID="tabScenarioMappingDetails">
                         <Items>
-                            <px:PXTabItem Text="History">
-                                <Template>
-                                    <px:PXFormView Height="500" DataMember="ScenarioMappingVersions" Caption="Scenario Mapping History" CaptionVisible="False" runat="server" ID="frmScenaroMappingHistory">
-                                        <Template>
-                                            <px:PXGrid FilesIndicator="False" NoteIndicator="False" SyncPosition="True" SkinID="Details" Height="300" runat="server" ID="grdScenarioMappingVersions">
-                                                <Levels>
-                                                    <px:PXGridLevel DataMember="ScenarioMappingVersions">
-                                                        <Columns>
-                                                            <px:PXGridColumn DataField="Selected" Width="60"></px:PXGridColumn>
-                                                            <px:PXGridColumn DataField="Version" Width="70"></px:PXGridColumn>
-                                                            <px:PXGridColumn DataField="ActionName" Width="70"></px:PXGridColumn>
-                                                            <px:PXGridColumn DataField="Name" Width="250"></px:PXGridColumn>
-                                                            <px:PXGridColumn DataField="ScreenID" Width="96"></px:PXGridColumn>
-                                                            <px:PXGridColumn DataField="GraphName" Width="250"></px:PXGridColumn>
-                                                        </Columns>
-                                                    </px:PXGridLevel>
-                                                </Levels>
-                                                <ActionBar ActionsVisible="True">
-                                                    <Actions>
-                                                        <AddNew Enabled="False"></AddNew>
-                                                    </Actions>
-                                                    <Actions>
-                                                        <Delete Enabled="False"></Delete>
-                                                    </Actions>
-                                                    <Actions>
-                                                        <EditRecord Enabled="False"></EditRecord>
-                                                    </Actions>
-                                                    <Actions>
-                                                        <Save Enabled="False"></Save>
-                                                    </Actions>
-                                                    <CustomItems>
-                                                        <px:PXToolBarButton Text="Compare"></px:PXToolBarButton>
-                                                    </CustomItems>
-                                                </ActionBar>
-                                            </px:PXGrid>
-                                        </Template>
-                                    </px:PXFormView>
-                                </Template>
-                            </px:PXTabItem>
-                            <px:PXTabItem Text="Mapping Conditions">
-                                <Template>
-                                    <px:PXFormView Height="500" DataMember="ScenarioMappingConditions" Caption="Mapping Conditions" CaptionVisible="False" runat="server" ID="frmScenarioMappingConditions">
-                                        <Template>
-                                            <px:PXGrid FilesIndicator="False" NoteIndicator="False" SyncPosition="True" Height="300" runat="server" ID="grdScenarioMappingConditions">
-                                                <Levels>
-                                                    <px:PXGridLevel DataMember="ScenarioMappingConditions">
-                                                        <Columns>
-                                                            <px:PXGridColumn DataField="ObjectName" Width="250"></px:PXGridColumn>
-                                                            <px:PXGridColumn DataField="FieldName" Width="250"></px:PXGridColumn>
-                                                        </Columns>
-                                                    </px:PXGridLevel>
-                                                </Levels>
-                                                <ActionBar ActionsVisible="True">
-                                                    <Actions>
-                                                        <AddNew Enabled="False"></AddNew>
-                                                    </Actions>
-                                                    <Actions>
-                                                        <Delete Enabled="False"></Delete>
-                                                    </Actions>
-                                                    <Actions>
-                                                        <EditRecord Enabled="False"></EditRecord>
-                                                    </Actions>
-                                                    <Actions>
-                                                        <Save Enabled="False"></Save>
-                                                    </Actions>
-                                                    <CustomItems>
-                                                        <px:PXToolBarButton Text="Condition History"></px:PXToolBarButton>
-                                                    </CustomItems>
-                                                </ActionBar>
-                                            </px:PXGrid>
-                                        </Template>
-                                    </px:PXFormView>
-                                </Template>
-                            </px:PXTabItem>
-                            <px:PXTabItem Text="Mapping Fields">
-                                <Template>
-                                    <px:PXFormView Height="500" DataMember="ScenarioMappingFields" Caption="Scenario Mapping Fields" CaptionVisible="False" runat="server" ID="frmScenarioMappingFields">
-                                        <Template>
-                                            <px:PXGrid Height="300" runat="server" ID="grdScenarioMappingFields">
-                                                <Levels>
-                                                    <px:PXGridLevel DataMember="ScenarioMappingFields">
-                                                        <Columns>
-                                                            <px:PXGridColumn DataField="ObjectName" Width="250"></px:PXGridColumn>
-                                                            <px:PXGridColumn DataField="FieldName" Width="280"></px:PXGridColumn>
-                                                        </Columns>
-                                                    </px:PXGridLevel>
-                                                </Levels>
-                                                <ActionBar>
-                                                    <CustomItems>
-                                                        <px:PXToolBarButton Text="Field History"></px:PXToolBarButton>
-                                                    </CustomItems>
-                                                </ActionBar>
-                                            </px:PXGrid>
-                                        </Template>
-                                    </px:PXFormView>
-                                </Template>
-                            </px:PXTabItem>
-                            <px:PXTabItem Text="Import Conditions">
-                                <Template>
-                                    <px:PXFormView Height="500" DataMember="ScenarioImportConditions" Caption="Import Conditions" CaptionVisible="False" runat="server" ID="frmScenarioImportConditions">
-                                        <Template>
-                                            <px:PXGrid FilesIndicator="False" NoteIndicator="False" SyncPosition="True" Height="300" runat="server" ID="grdScenarioImportConditions">
-                                                <Levels>
-                                                    <px:PXGridLevel DataMember="ScenarioImportConditions">
-                                                        <Columns>
-                                                            <px:PXGridColumn DataField="ObjectName" Width="250"></px:PXGridColumn>
-                                                            <px:PXGridColumn DataField="FieldName" Width="250"></px:PXGridColumn>
-                                                        </Columns>
-                                                    </px:PXGridLevel>
-                                                </Levels>
-                                                <ActionBar ActionsVisible="True">
-                                                    <Actions>
-                                                        <AddNew Enabled="False"></AddNew>
-                                                    </Actions>
-                                                    <Actions>
-                                                        <Delete Enabled="False"></Delete>
-                                                    </Actions>
-                                                    <Actions>
-                                                        <EditRecord Enabled="False"></EditRecord>
-                                                    </Actions>
-                                                    <Actions>
-                                                        <Save Enabled="False"></Save>
-                                                    </Actions>
-                                                    <CustomItems>
-                                                        <px:PXToolBarButton Text="Condition History"></px:PXToolBarButton>
-                                                    </CustomItems>
-                                                </ActionBar>
-                                            </px:PXGrid>
-                                        </Template>
-                                    </px:PXFormView>
-                                </Template>
-                            </px:PXTabItem>
+                            <!--#include file="~\Pages\AK\Includes\ScenarioMappingVersions_History.inc"-->
+                            <!--#include file="~\Pages\AK\Includes\ScenarioMappingVersions_MappingConditions.inc"-->
+                            <!--#include file="~\Pages\AK\Includes\ScenarioMappingVersions_MappingFields.inc"-->
+                            <!--#include file="~\Pages\AK\Includes\ScenarioMappingVersions_ImportConditions.inc"-->
                         </Items>
                     </px:PXTab>
                     <px:PXLayoutRule runat="server" ID="CstPXLayoutRule123" StartColumn="True"></px:PXLayoutRule>
@@ -810,14 +387,8 @@
                                 <ActionBar ActionsVisible="True">
                                     <Actions>
                                         <AddNew Enabled="False"></AddNew>
-                                    </Actions>
-                                    <Actions>
                                         <Delete Enabled="False"></Delete>
-                                    </Actions>
-                                    <Actions>
                                         <Save Enabled="False"></Save>
-                                    </Actions>
-                                    <Actions>
                                         <ExportExcel Enabled="True"></ExportExcel>
                                     </Actions>
                                 </ActionBar>
@@ -833,41 +404,7 @@
                     </px:PXFormView>
                     <px:PXTab Width="500" runat="server" ID="tabSitemapDetails" DataMember="SitemapVersions">
                         <Items>
-                            <px:PXTabItem Text="History">
-                                <Template>
-                                    <px:PXFormView Width="500" runat="server" ID="frmSitemapVersions" DataMember="SitemapVersions">
-                                        <Template>
-                                            <px:PXGrid SkinID="Details" Height="300" runat="server" ID="grdSitemapVersions">
-                                                <Levels>
-                                                    <px:PXGridLevel DataMember="SitemapVersions">
-                                                        <Columns>
-                                                            <px:PXGridColumn DataField="Selected" Width="60"></px:PXGridColumn>
-                                                            <px:PXGridColumn DataField="Version" Width="70"></px:PXGridColumn>
-                                                            <px:PXGridColumn DataField="Title" Width="280"></px:PXGridColumn>
-                                                            <px:PXGridColumn DataField="ActionName" Width="70"></px:PXGridColumn>
-                                                            <px:PXGridColumn DataField="CreatedDateTime" Width="90"></px:PXGridColumn>
-                                                        </Columns>
-                                                    </px:PXGridLevel>
-                                                </Levels>
-                                                <ActionBar>
-                                                    <CustomItems>
-                                                        <px:PXToolBarButton Text="Compare"></px:PXToolBarButton>
-                                                    </CustomItems>
-                                                    <Actions>
-                                                        <AddNew Enabled="False"></AddNew>
-                                                    </Actions>
-                                                    <Actions>
-                                                        <Delete Enabled="False"></Delete>
-                                                    </Actions>
-                                                    <Actions>
-                                                        <EditRecord Enabled="False"></EditRecord>
-                                                    </Actions>
-                                                </ActionBar>
-                                            </px:PXGrid>
-                                        </Template>
-                                    </px:PXFormView>
-                                </Template>
-                            </px:PXTabItem>
+                            <!--#include file="~\Pages\AK\Includes\SitemapVersions_History.inc"-->
                         </Items>
                     </px:PXTab>
                     <px:PXLayoutRule runat="server" ID="CstPXLayoutRule68" StartColumn="True"></px:PXLayoutRule>
@@ -894,14 +431,8 @@
                                 <ActionBar ActionsVisible="True">
                                     <Actions>
                                         <AddNew Enabled="False"></AddNew>
-                                    </Actions>
-                                    <Actions>
                                         <Delete Enabled="False"></Delete>
-                                    </Actions>
-                                    <Actions>
                                         <EditRecord Enabled="False"></EditRecord>
-                                    </Actions>
-                                    <Actions>
                                         <Save Enabled="False"></Save>
                                     </Actions>
                                 </ActionBar>
@@ -914,41 +445,7 @@
                     </px:PXFormView>
                     <px:PXTab Width="500" DataMember="WebHookVersions" runat="server" ID="tabWebHookDetails">
                         <Items>
-                            <px:PXTabItem Text="History">
-                                <Template>
-                                    <px:PXFormView Width="500" runat="server" ID="frmWebHookVersions" DataMember="WebHookVersions">
-                                        <Template>
-                                            <px:PXGrid SkinID="Details" runat="server" ID="grdWebHookVersions" Height="300">
-                                                <Levels>
-                                                    <px:PXGridLevel DataMember="WebHookVersions">
-                                                        <Columns>
-                                                            <px:PXGridColumn DataField="Selected" Width="60"></px:PXGridColumn>
-                                                            <px:PXGridColumn DataField="Version" Width="70"></px:PXGridColumn>
-                                                            <px:PXGridColumn DataField="Name" Width="70"></px:PXGridColumn>
-                                                            <px:PXGridColumn DataField="ActionName" Width="70"></px:PXGridColumn>
-                                                            <px:PXGridColumn DataField="CreatedDateTime" Width="90"></px:PXGridColumn>
-                                                        </Columns>
-                                                    </px:PXGridLevel>
-                                                </Levels>
-                                                <ActionBar>
-                                                    <CustomItems>
-                                                        <px:PXToolBarButton Text="Compare"></px:PXToolBarButton>
-                                                    </CustomItems>
-                                                    <Actions>
-                                                        <AddNew Enabled="False"></AddNew>
-                                                    </Actions>
-                                                    <Actions>
-                                                        <Delete Enabled="False"></Delete>
-                                                    </Actions>
-                                                    <Actions>
-                                                        <EditRecord Enabled="False"></EditRecord>
-                                                    </Actions>
-                                                </ActionBar>
-                                            </px:PXGrid>
-                                        </Template>
-                                    </px:PXFormView>
-                                </Template>
-                            </px:PXTabItem>
+                            <!--#include file="~\Pages\AK\Includes\WebHookVersions_History.inc"-->
                         </Items>
                     </px:PXTab>
                     <px:PXLayoutRule runat="server" ID="CstPXLayoutRule81" StartColumn="True"></px:PXLayoutRule>

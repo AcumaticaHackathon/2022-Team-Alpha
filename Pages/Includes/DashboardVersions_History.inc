@@ -5,13 +5,7 @@
                 <px:PXGrid Height="300" SkinID="Details" runat="server" ID="grdDashboardHistory">
                     <Levels>
                         <px:PXGridLevel DataMember="DashboardVersions">
-                            <Columns>
-                                <px:PXGridColumn DataField="Selected" Width="60"></px:PXGridColumn>
-                                <px:PXGridColumn DataField="Version" Width="70"></px:PXGridColumn>
-                                <px:PXGridColumn DataField="Name" Width="70"></px:PXGridColumn>
-                                <px:PXGridColumn DataField="ActionName" Width="70"></px:PXGridColumn>
-                                <px:PXGridColumn DataField="CreatedDateTime" Width="90"></px:PXGridColumn>
-                            </Columns>
+                            <!--#include file="~\Pages\AK\Includes\Grid_History.inc"-->
                         </px:PXGridLevel>
                     </Levels>
                     <ActionBar>

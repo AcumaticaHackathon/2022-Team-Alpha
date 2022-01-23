@@ -5,14 +5,7 @@
                 <px:PXGrid FilesIndicator="False" NoteIndicator="False" SyncPosition="True" SkinID="Details" Height="300" runat="server" ID="grdAttributeHistory">
                     <Levels>
                         <px:PXGridLevel DataMember="AttributeVersions">
-                            <Columns>
-                                <px:PXGridColumn Type="CheckBox" DataField="Selected" Width="60"></px:PXGridColumn>
-                                <px:PXGridColumn DataField="Version" Width="70"></px:PXGridColumn>
-                                <px:PXGridColumn DataField="ActionName" Width="70"></px:PXGridColumn>
-                                <px:PXGridColumn DataField="Description" Width="70"></px:PXGridColumn>
-                                <px:PXGridColumn DataField="ControlType" Width="70"></px:PXGridColumn>
-                                <px:PXGridColumn DataField="CreatedDateTime" Width="90"></px:PXGridColumn>
-                            </Columns>
+                            <!--#include file="~\Pages\AK\Includes\Grid_History.inc"-->
                         </px:PXGridLevel>
                     </Levels>
                     <AutoSize Enabled="True" Container="Parent"></AutoSize>
