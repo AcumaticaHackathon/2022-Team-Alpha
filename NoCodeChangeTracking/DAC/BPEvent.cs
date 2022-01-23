@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using PX.Data;
+using PX.Data.BQL;
 
 namespace Aktion.Common.Acumatica.NoCodeChangeTracking.DAC
 {
@@ -87,6 +88,46 @@ namespace Aktion.Common.Acumatica.NoCodeChangeTracking.DAC
         [PXUIField(DisplayName = "Is Group By New")]
         public virtual bool? IsGroupByNew { get; set; }
         public abstract class isGroupByNew : PX.Data.BQL.BqlBool.Field<isGroupByNew> { }
+        #endregion
+
+        #region CreatedByID
+        public abstract class createdByID : BqlGuid.Field<createdByID> { }
+        [PXDBCreatedByID]
+        [PXUIField(DisplayName = PXDBLastModifiedByIDAttribute.DisplayFieldNames.CreatedByID, Enabled = false)]
+        public virtual Guid? CreatedByID { get; set; }
+        #endregion
+
+        #region CreatedByScreenID
+        public abstract class createdByScreenID : BqlString.Field<createdByScreenID> { }
+        [PXDBCreatedByScreenID]
+        public virtual string CreatedByScreenID { get; set; }
+        #endregion
+
+        #region CreatedDateTime
+        public abstract class createdDateTime : BqlDateTime.Field<createdDateTime> { }
+        [PXDBCreatedDateTime]
+        [PXUIField(DisplayName = PXDBLastModifiedByIDAttribute.DisplayFieldNames.CreatedDateTime, Enabled = false)]
+        public virtual DateTime? CreatedDateTime { get; set; }
+        #endregion
+
+        #region LastModifiedByID
+        public abstract class lastModifiedByID : BqlGuid.Field<lastModifiedByID> { }
+        [PXDBLastModifiedByID]
+        [PXUIField(DisplayName = PXDBLastModifiedByIDAttribute.DisplayFieldNames.LastModifiedByID, Enabled = false)]
+        public virtual Guid? LastModifiedByID { get; set; }
+        #endregion
+
+        #region LastModifiedByScreenID
+        public abstract class lastModifiedByScreenID : BqlString.Field<lastModifiedByScreenID> { }
+        [PXDBLastModifiedByScreenID]
+        public virtual string LastModifiedByScreenID { get; set; }
+        #endregion
+
+        #region LastModifiedDateTime
+        public abstract class lastModifiedDateTime : BqlDateTime.Field<lastModifiedDateTime> { }
+        [PXDBLastModifiedDateTime]
+        [PXUIField(DisplayName = PXDBLastModifiedByIDAttribute.DisplayFieldNames.LastModifiedDateTime, Enabled = false)]
+        public virtual DateTime? LastModifiedDateTime { get; set; }
         #endregion
 
         #region Noteid
