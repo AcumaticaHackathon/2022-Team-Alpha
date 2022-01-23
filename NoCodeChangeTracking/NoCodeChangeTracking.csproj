@@ -1,0 +1,313 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aktion.Common.Acumatica.NoCodeChangeTracking</RootNamespace>
+    <AssemblyName>Aktion.Common.Acumatica.NoCodeChangeTracking</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <WarningLevel>3</WarningLevel>
+    <FileVersion>21.203.0026</FileVersion>
+    <InformationalVersion>21.203.0026</InformationalVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PX.Common">
+      <HintPath>..\lib\PX.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PX.Common.Std">
+      <HintPath>..\lib\PX.Common.Std.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PX.CS.Contracts">
+      <HintPath>..\lib\PX.CS.Contracts.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PX.Data">
+      <HintPath>..\lib\PX.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PX.Data.BQL.Fluent">
+      <HintPath>..\lib\PX.Data.BQL.Fluent.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PX.Objects">
+      <HintPath>..\lib\PX.Objects.DLL</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAC\AKChangeObject.cs" />
+    <Compile Include="DAC\AKChangeObjectSubType.cs" />
+    <Compile Include="DAC\AKChangeObjectType.cs" />
+    <Compile Include="DAC\AKChangeObjectVersion.cs" />
+    <Compile Include="DAC\AKChangeVersion.cs" />
+    <Compile Include="DAC\AttributeDetailVersion.cs" />
+    <Compile Include="DAC\BPEvent.cs" />
+    <Compile Include="DAC\BusinessEventSubscriberVersion.cs" />
+    <Compile Include="DAC\BusinessEventScheduleVersion.cs" />
+    <Compile Include="DAC\BusinessEventInquiryParameterVersion.cs" />
+    <Compile Include="DAC\BusinessEventTriggerConditionVersion.cs" />
+    <Compile Include="DAC\GIGroupByVersion.cs" />
+    <Compile Include="DAC\GIFilterVersion.cs" />
+    <Compile Include="DAC\GIWhereVersion.cs" />
+    <Compile Include="DAC\GITableVersion.cs" />
+    <Compile Include="DAC\GISortVersion.cs" />
+    <Compile Include="DAC\GIResultVersion.cs" />
+    <Compile Include="DAC\GIRelationVersion.cs" />
+    <Compile Include="DAC\GIOnVersion.cs" />
+    <Compile Include="DAC\GIVersion.cs" />
+    <Compile Include="DAC\ScenarioMappingFieldVersion.cs" />
+    <Compile Include="DAC\ScenarioMappingConditionVersion.cs" />
+    <Compile Include="DAC\ScenarioMappingVersion.cs" />
+    <Compile Include="DAC\RoleVersion.cs" />
+    <Compile Include="DAC\RoleInCacheVersion.cs" />
+    <Compile Include="DAC\RoleInGraphVersion.cs" />
+    <Compile Include="DAC\RoleInMemberVersion.cs" />
+    <Compile Include="DAC\CSAttribute.cs" />
+    <Compile Include="DAC\CSAttributeDetail.cs" />
+    <Compile Include="DAC\CSAttributeGroup.cs" />
+    <Compile Include="DAC\CSScreenAttribute.cs" />
+    <Compile Include="DAC\DashboardParameter.cs" />
+    <Compile Include="DAC\DashboardParameterVersion.cs" />
+    <Compile Include="DAC\DashboardVersion.cs" />
+    <Compile Include="DAC\BusinessEventVersion.cs" />
+    <Compile Include="DAC\ITrackedObject.cs" />
+    <Compile Include="DAC\Roles.cs" />
+    <Compile Include="DAC\RolesInCache.cs" />
+    <Compile Include="DAC\RolesInGraph.cs" />
+    <Compile Include="DAC\RolesInMember.cs" />
+    <Compile Include="DAC\ScreenAttributeVersion.cs" />
+    <Compile Include="DAC\AttributeGroupVersion.cs" />
+    <Compile Include="DAC\Sitemap.cs" />
+    <Compile Include="DAC\ScenarioImportConditionVersion.cs" />
+    <Compile Include="DAC\SitemapVersion.cs" />
+    <Compile Include="DAC\WebHook.cs" />
+    <Compile Include="DAC\WebHookVersion.cs" />
+    <Compile Include="DAC\Widget.cs" />
+    <Compile Include="DAC\WidgetVersion.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="DAC\ReportVersion.cs" />
+    <Compile Include="DAC\AttributeVersion.cs" />
+    <Compile Include="DAC\ChangeObjectVersionFilter.cs" />
+    <Compile Include="DAC\ChangeObjectFilter.cs" />
+    <Compile Include="DAC\UserReport.cs" />
+    <Compile Include="Graphs\NoCodeChangeTrack.cs" />
+    <Compile Include="DAC\Dashboard.cs" />
+    <Compile Include="DAC\BPInquiryParameter.cs" />
+    <Compile Include="DAC\BPEventSchedule.cs" />
+    <Compile Include="DAC\BPEventSubscriber.cs" />
+    <Compile Include="DAC\BPEventTriggerCondition.cs" />
+    <Compile Include="DAC\SYImportCondition.cs" />
+    <Compile Include="DAC\SYMapping.cs" />
+    <Compile Include="DAC\SYMappingCondition.cs" />
+    <Compile Include="DAC\SYMappingField.cs" />
+    <Compile Include="DAC\GIDesign.cs" />
+    <Compile Include="DAC\GIFilter.cs" />
+    <Compile Include="DAC\GIGroupBy.cs" />
+    <Compile Include="DAC\GIMassAction.cs" />
+    <Compile Include="DAC\GIMassUpdateField.cs" />
+    <Compile Include="DAC\GINavigationCondition.cs" />
+    <Compile Include="DAC\GINavigationParameter.cs" />
+    <Compile Include="DAC\GINavigationScreen.cs" />
+    <Compile Include="DAC\GIOn.cs" />
+    <Compile Include="DAC\GIRecordDefault.cs" />
+    <Compile Include="DAC\GIRelation.cs" />
+    <Compile Include="DAC\GIResult.cs" />
+    <Compile Include="DAC\GISort.cs" />
+    <Compile Include="DAC\GITable.cs" />
+    <Compile Include="DAC\GIWhere.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces">
+      <Version>5.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe">
+      <Version>5.0.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SQL Scripts\Create_AKChangeObject.sql" />
+    <Content Include="SQL Scripts\Create_AKChangeObjectSubType.sql" />
+    <Content Include="SQL Scripts\Create_AKChangeObjectType.sql" />
+    <Content Include="SQL Scripts\Create_AKChangeObjectVersion.sql" />
+    <Content Include="SQL Scripts\Create_AKChangeVersion.sql" />
+    <Content Include="SQL Scripts\Create_GIWhere.sql" />
+    <Content Include="SQL Scripts\Create_GITable.sql" />
+    <Content Include="SQL Scripts\Create_GISort.sql" />
+    <Content Include="SQL Scripts\Create_GIResult.sql" />
+    <Content Include="SQL Scripts\Create_GIRelation.sql" />
+    <Content Include="SQL Scripts\Create_GIOn.sql" />
+    <Content Include="SQL Scripts\Create_GIGroupBy.sql" />
+    <Content Include="SQL Scripts\Create_GIDesign.sql" />
+    <Content Include="SQL Scripts\Create_GIFilter.sql" />
+    <Content Include="SQL Scripts\Create_SYMapping.sql" />
+    <Content Include="SQL Scripts\Create_SYMappingCondition.sql" />
+    <Content Include="SQL Scripts\Create_SYMappingField.sql" />
+    <Content Include="SQL Scripts\Create_SYImportCondition.sql" />
+    <Content Include="SQL Scripts\Create_RolesInGraph.sql" />
+    <Content Include="SQL Scripts\Create_RolesInMember.sql" />
+    <Content Include="SQL Scripts\Create_RolesInCache.sql" />
+    <Content Include="SQL Scripts\Create_Roles.sql" />
+    <Content Include="SQL Scripts\Create_BPEventTriggerCondition.sql" />
+    <Content Include="SQL Scripts\Create_BPEventSchedule.sql" />
+    <Content Include="SQL Scripts\Create_BPInquiryParameter.sql" />
+    <Content Include="SQL Scripts\Create_BPEventSubscriber.sql" />
+    <Content Include="SQL Scripts\Create_BPEvent.sql" />
+    <Content Include="SQL Scripts\Create_CSAttribute.sql" />
+    <Content Include="SQL Scripts\Create_CSAttributeDetail.sql" />
+    <Content Include="SQL Scripts\Create_CSAttributeGroup.sql" />
+    <Content Include="SQL Scripts\Create_CSScreenAttribute.sql" />
+    <Content Include="SQL Scripts\Create_Dashboard.sql" />
+    <Content Include="SQL Scripts\Create_DashboardParameter.sql" />
+    <Content Include="SQL Scripts\Create_Sitemap.sql" />
+    <Content Include="SQL Scripts\Create_UserReport.sql" />
+    <Content Include="SQL Scripts\Create_WebHook.sql" />
+    <Content Include="SQL Scripts\Create_Widget.sql" />
+    <Content Include="SQL Scripts\Delete_GIWhere.sql" />
+    <Content Include="SQL Scripts\Delete_GITable.sql" />
+    <Content Include="SQL Scripts\Delete_GISort.sql" />
+    <Content Include="SQL Scripts\Delete_GIResult.sql" />
+    <Content Include="SQL Scripts\Delete_GIRelation.sql" />
+    <Content Include="SQL Scripts\Delete_GIOn.sql" />
+    <Content Include="SQL Scripts\Delete_GIGroupBy.sql" />
+    <Content Include="SQL Scripts\Delete_GIFilter.sql" />
+    <Content Include="SQL Scripts\Delete_GIDesign.sql" />
+    <Content Include="SQL Scripts\Delete_SYMappingCondition.sql" />
+    <Content Include="SQL Scripts\Delete_SYMappingField.sql" />
+    <Content Include="SQL Scripts\Delete_SYImportCondition.sql" />
+    <Content Include="SQL Scripts\Delete_SYMapping.sql" />
+    <Content Include="SQL Scripts\Delete_Roles.sql" />
+    <Content Include="SQL Scripts\Delete_RolesInCache.sql" />
+    <Content Include="SQL Scripts\Delete_RolesInGraph.sql" />
+    <Content Include="SQL Scripts\Delete_RolesInMember.sql" />
+    <Content Include="SQL Scripts\Delete_BPEventSchedule.sql" />
+    <Content Include="SQL Scripts\Delete_BPEventSubscriber.sql" />
+    <Content Include="SQL Scripts\Delete_BPEventTriggerCondition.sql" />
+    <Content Include="SQL Scripts\Delete_BPInquiryParameter.sql" />
+    <Content Include="SQL Scripts\Delete_BPEvent.sql" />
+    <Content Include="SQL Scripts\Delete_CSAttribute.sql" />
+    <Content Include="SQL Scripts\Delete_CSAttributeDetail.sql" />
+    <Content Include="SQL Scripts\Delete_CSAttributeGroup.sql" />
+    <Content Include="SQL Scripts\Delete_CSScreenAttribute.sql" />
+    <Content Include="SQL Scripts\Delete_Dashboard.sql" />
+    <Content Include="SQL Scripts\Delete_DashboardParameter.sql" />
+    <Content Include="SQL Scripts\Delete_Sitemap.sql" />
+    <Content Include="SQL Scripts\Delete_UserReport.sql" />
+    <Content Include="SQL Scripts\Delete_WebHook.sql" />
+    <Content Include="SQL Scripts\Delete_Widget.sql" />
+    <Content Include="SQL Scripts\Insert_GIWhere.sql" />
+    <Content Include="SQL Scripts\Insert_GITable.sql" />
+    <Content Include="SQL Scripts\Insert_GISort.sql" />
+    <Content Include="SQL Scripts\Insert_GIResult.sql" />
+    <Content Include="SQL Scripts\Insert_GIRelation.sql" />
+    <Content Include="SQL Scripts\Insert_GIOn.sql" />
+    <Content Include="SQL Scripts\Insert_GIGroupBy.sql" />
+    <Content Include="SQL Scripts\Insert_GIFilter.sql" />
+    <Content Include="SQL Scripts\Insert_GIDesign.sql" />
+    <Content Include="SQL Scripts\Insert_SYMappingCondition.sql" />
+    <Content Include="SQL Scripts\Insert_SYMappingField.sql" />
+    <Content Include="SQL Scripts\Insert_SYImportCondition.sql" />
+    <Content Include="SQL Scripts\Insert_SYMapping.sql" />
+    <Content Include="SQL Scripts\Insert_Roles.sql" />
+    <Content Include="SQL Scripts\Insert_RolesInCache.sql" />
+    <Content Include="SQL Scripts\Insert_RolesInGraph.sql" />
+    <Content Include="SQL Scripts\Insert_RolesInMember.sql" />
+    <Content Include="SQL Scripts\Insert_BPEventSubscriber.sql" />
+    <Content Include="SQL Scripts\Insert_BPEventSchedule.sql" />
+    <Content Include="SQL Scripts\Insert_BPEventTriggerCondition.sql" />
+    <Content Include="SQL Scripts\Insert_BPInquiryParameter.sql" />
+    <Content Include="SQL Scripts\Insert_BPEvent.sql" />
+    <Content Include="SQL Scripts\Insert_CSAttribute.sql" />
+    <Content Include="SQL Scripts\Insert_CSAttributeDetail.sql" />
+    <Content Include="SQL Scripts\Insert_CSAttributeGroup.sql" />
+    <Content Include="SQL Scripts\Insert_CSScreenAttribute.sql" />
+    <Content Include="SQL Scripts\Insert_Dashboard.sql" />
+    <Content Include="SQL Scripts\Insert_DashboardParameter.sql" />
+    <Content Include="SQL Scripts\Insert_Sitemap.sql" />
+    <Content Include="SQL Scripts\Insert_UserReport.sql" />
+    <Content Include="SQL Scripts\Insert_WebHook.sql" />
+    <Content Include="SQL Scripts\Insert_Widget.sql" />
+    <Content Include="SQL Scripts\Proc_TrackChange.sql" />
+    <Content Include="SQL Scripts\Update_GIWhere.sql" />
+    <Content Include="SQL Scripts\Update_GITable.sql" />
+    <Content Include="SQL Scripts\Update_GISort.sql" />
+    <Content Include="SQL Scripts\Update_GIResult.sql" />
+    <Content Include="SQL Scripts\Update_GIRelation.sql" />
+    <Content Include="SQL Scripts\Update_GIOn.sql" />
+    <Content Include="SQL Scripts\Update_GIGroupBy.sql" />
+    <Content Include="SQL Scripts\Update_GIFilter.sql" />
+    <Content Include="SQL Scripts\Update_GIDesign.sql" />
+    <Content Include="SQL Scripts\Update_SYMappingField.sql" />
+    <Content Include="SQL Scripts\Update_SYMappingCondition.sql" />
+    <Content Include="SQL Scripts\Update_SYImportCondition.sql" />
+    <Content Include="SQL Scripts\Update_SYMapping.sql" />
+    <Content Include="SQL Scripts\Update_Roles.sql" />
+    <Content Include="SQL Scripts\Update_RolesInCache.sql" />
+    <Content Include="SQL Scripts\Update_RolesInGraph.sql" />
+    <Content Include="SQL Scripts\Update_RolesInMember.sql" />
+    <Content Include="SQL Scripts\Update_BPEventSchedule.sql" />
+    <Content Include="SQL Scripts\Update_BPEventTriggerCondition.sql" />
+    <Content Include="SQL Scripts\Update_BPEventSubscriber.sql" />
+    <Content Include="SQL Scripts\Update_BPInquiryParameter.sql" />
+    <Content Include="SQL Scripts\Update_BPEvent.sql" />
+    <Content Include="SQL Scripts\Update_CSAttribute.sql" />
+    <Content Include="SQL Scripts\Update_CSAttributeDetail.sql" />
+    <Content Include="SQL Scripts\Update_CSAttributeGroup.sql" />
+    <Content Include="SQL Scripts\Update_CSScreenAttribute.sql" />
+    <Content Include="SQL Scripts\Update_Dashboard.sql" />
+    <Content Include="SQL Scripts\Update_DashboardParameter.sql" />
+    <Content Include="SQL Scripts\Update_Sitemap.sql" />
+    <Content Include="SQL Scripts\Update_UserReport.sql" />
+    <Content Include="SQL Scripts\Update_WebHook.sql" />
+    <Content Include="SQL Scripts\Update_Widget.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SQL Scripts\read.me" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

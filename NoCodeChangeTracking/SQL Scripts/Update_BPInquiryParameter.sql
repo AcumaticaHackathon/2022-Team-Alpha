@@ -1,0 +1,101 @@
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE OR ALTER TRIGGER Update_BPInquiryParameter
+   ON BPInquiryParameter
+   AFTER UPDATE
+AS 
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+	DECLARE 
+		@changeObjectTypeID int,
+		@changeObjectSubTypeID int
+
+	-- Look for type IDs
+
+	SELECT @changeObjectTypeID = ChangeObjectTypeID 
+	FROM AKChangeObjectType 
+	WHERE [Name] = 'BusinessEvent'
+
+	SELECT @changeObjectSubTypeID = ChangeObjectSubTypeID
+	FROM AKChangeObjectSubType
+	WHERE [Name] = 'BPInquiryParameter'
+
+	-- Initialize and fill key table for looping trigger rows
+
+	DECLARE @loopKeys TABLE (
+		CompanyID int,
+		EventID uniqueidentifier,
+		Name nvarchar(64)
+	)
+
+	INSERT INTO @loopKeys (CompanyID, EventID, Name)
+	SELECT CompanyID, EventID, Name FROM inserted
+
+	DECLARE 
+		@companyID int,
+		@eventID uniqueidentifier,
+		@name nvarchar(64),
+		@changeObjectID bigint,
+		@jsonKey nvarchar(1000),
+		@jsonObject nvarchar(max)
+
+	-- Loop through trigger rows
+	WHILE (EXISTS(SELECT 1 FROM @loopKeys))
+	BEGIN
+		-- Grab keys of a row
+		SELECT TOP 1 
+			@companyID = CompanyID,
+			@eventID = EventID,
+			@name = Name
+		FROM @loopKeys
+
+		-- Build JSON key of current row
+		SELECT @jsonKey = (
+			SELECT CompanyID, EventID, Name
+			FROM @loopKeys
+			WHERE CompanyID = @companyID
+				AND EventID = @eventID
+				AND Name = @name
+			FOR JSON AUTO, WITHOUT_ARRAY_WRAPPER
+		)
+
+		-- Build JSON object for current row
+		SELECT @jsonObject = (
+			SELECT * 
+			FROM inserted
+			WHERE CompanyID = @companyID
+				AND EventID = @eventID
+				AND Name = @name
+			FOR JSON AUTO, WITHOUT_ARRAY_WRAPPER
+		)
+
+		-- Look for object in change tables
+		SELECT @changeObjectID = ChangeObjectID
+		FROM AKChangeObject 
+		WHERE CompanyID = @companyID
+			AND ChangeObjectTypeID = @changeObjectTypeID
+			AND CAST(JSON_VALUE(KeyValues, '$.CompanyID') AS int) = @companyID
+			AND CAST(JSON_VALUE(KeyValues, '$.EventID') AS uniqueidentifier) = @eventID
+			AND CAST(JSON_VALUE(KeyValues, '$.Name') AS nvarchar(64)) = @name
+
+		-- Insert object into change tracking
+		EXEC AKTrackChange @jsonObject, @jsonKey, @companyID, @changeObjectTypeID, @changeObjectSubTypeID, @changeObjectID, 'U'
+
+		-- Remove key of current row to continue looping
+		DELETE FROM @loopKeys
+		WHERE CompanyID = @companyID
+			AND EventID = @eventID
+			AND Name = @name
+
+	END
+
+END
+
+GO
